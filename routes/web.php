@@ -15,7 +15,7 @@ use App\Exports\PLanillaExport;
 */
 
 Route::get('/', function () {
-    return view('Auth.login');
+    return view('Welcome');
 });
 
 /*
@@ -47,4 +47,5 @@ Route::get('pdf/planillamensual/planillaPDF/import/{id}', 'PlanillaMensualPDF@Ge
 /*Route::get('planillamensual/exportar/exportar', 'PlanillaMensualImportController@GenerarExcelAyuda');*/
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
+Route::auth();
 Route::get('/home', 'HomeController@index')->name('home');
