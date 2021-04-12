@@ -15,7 +15,7 @@ use App\Exports\PLanillaExport;
 */
 
 Route::get('/', function () {
-    return view('resources/views/Auth/login');
+    return view('Auth.login');
 });
 
 /*
