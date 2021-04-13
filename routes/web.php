@@ -44,8 +44,8 @@ Route::resource('ayuda/index', 'AyudaController');
 Route::get('pdf/planillamensual/planillaPDF/{id}', 'PlanillaMensualPDF@Generar');
 Route::get('pdf/planillamensual/planillaPDF/historico/{id}', 'PlanillaMensualPDF@GenerarHistorico');
 Route::get('pdf/planillamensual/planillaPDF/import/{id}', 'PlanillaMensualPDF@GenerarImport');
-/*Route::get('planillamensual/exportar/exportar', 'PlanillaMensualImportController@GenerarExcelAyuda');*/
+Route::get('planillamensual/exportar/exportar', 'PlanillaMensualImportController@GenerarExcelAyuda');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 Auth::routes();
-Route::auth();
+/*Route::auth();*/
 Route::get('/home', 'HomeController@index')->name('home');
